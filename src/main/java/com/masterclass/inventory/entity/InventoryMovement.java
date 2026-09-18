@@ -1,0 +1,4 @@
+package com.masterclass.inventory.entity;
+import jakarta.persistence.*;import lombok.*;import java.time.OffsetDateTime;
+@Entity @Table(name="inventory_movements", indexes={@Index(name="ix_movements_product_date",columnList="product_id,movement_date")}) @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
+public class InventoryMovement { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @ManyToOne(fetch=FetchType.LAZY, optional=false) @JoinColumn(name="product_id",nullable=false,foreignKey=@ForeignKey(name="fk_movements_products")) private Product product; @Enumerated(EnumType.STRING) @Column(name="movement_type",nullable=false,length=30) private MovementType movementType; @Column(nullable=false) private int quantity; @Column(name="movement_date",nullable=false) private OffsetDateTime date; @Column(name="created_by",nullable=false,length=100) private String user; }

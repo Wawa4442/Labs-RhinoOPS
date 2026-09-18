@@ -1,0 +1,1 @@
+package com.masterclass.inventory.mapper; import com.masterclass.inventory.dto.CategoryDtos.*; import com.masterclass.inventory.entity.Category; import org.mapstruct.*; @Mapper(componentModel="spring") public interface CategoryMapper { CategoryResponse toResponse(Category c); Category toEntity(CategoryRequest r); }

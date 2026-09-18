@@ -1,0 +1,1 @@
+package com.masterclass.inventory.dto; import jakarta.validation.constraints.*; public class CategoryDtos { public record CategoryRequest(@NotBlank @Size(max=120) String name,@Size(max=500) String description){} public record CategoryResponse(Long id,String name,String description){} }

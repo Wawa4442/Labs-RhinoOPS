@@ -1,0 +1,1 @@
+package com.masterclass.inventory.dto; import java.math.BigDecimal; import java.time.LocalDate; public class ReportDtos { public record ProductInventoryReport(Long productId,String sku,String name,String category,int stock,int reorderLevel,BigDecimal stockValue){} public record DailySalesReport(LocalDate date,long transactions,BigDecimal totalSales){} }

@@ -1,0 +1,2 @@
+package com.masterclass.inventory.mapper; import com.masterclass.inventory.dto.ProductDtos.*; import com.masterclass.inventory.entity.*; import org.mapstruct.*;
+@Mapper(componentModel="spring") public interface ProductMapper { @Mapping(source="category.id", target="categoryId") @Mapping(source="category.name", target="categoryName") ProductResponse toResponse(Product product); @Mapping(target="id",ignore=true) @Mapping(target="category",ignore=true) Product toEntity(ProductRequest request); }

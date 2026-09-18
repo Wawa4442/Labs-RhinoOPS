@@ -1,0 +1,106 @@
+========================================
+Hands-on Lab 1: Database bootstrap
+========================================
+Tasks:
+- Start SQL Server container.
+- Run schema script.
+- Run seed script.
+- Validate categories/products.
+
+Acceptance:
+- Students can query seed products and explain constraints.
+
+
+========================================
+Hands-on Lab 2: Product CRUD vertical slice
+========================================
+Tasks:
+- Create entity + DTOs.
+- Build repository + mapper.
+- Implement service.
+- Expose controller.
+- Test in Swagger.
+
+Acceptance:
+- Product can be created, searched, updated, and deactivated.
+
+
+========================================
+Hands-on Lab 3: Inventory replenishment and adjustment
+========================================
+Tasks:
+- Implement InventoryService.
+- Write movement rows for every mutation.
+- Block invalid adjustment type.
+- Block adjustment out beyond stock.
+
+Acceptance:
+- Stock changes and movement history prove the mutation.
+
+
+========================================
+Hands-on Lab 4: POS sale flow
+========================================
+Tasks:
+- Post a multi-item sale.
+- Validate product status.
+- Validate stock.
+- Calculate subtotals and total.
+- Persist sale and movements.
+
+Acceptance:
+- Sale is created and inventory is reduced for every item.
+
+
+========================================
+Hands-on Lab 5: Reports
+========================================
+Tasks:
+- Low stock report.
+- Inventory value report.
+- Daily sales report.
+- Movement history endpoint.
+
+Acceptance:
+- Reports answer operational questions from persisted data.
+
+
+========================================
+Hands-on Lab 6: Testing and quality gates
+========================================
+Tasks:
+- Write Mockito test for insufficient stock.
+- Write integration smoke test with Testcontainers.
+- Run mvn verify.
+- Discuss coverage meaning and limits.
+
+Acceptance:
+- Build fails when business rules regress.
+
+
+========================================
+Hands-on Lab 7: Containerized runtime
+========================================
+Tasks:
+- Build the Docker image.
+- Start docker compose.
+- Validate health endpoint.
+- Open Swagger.
+- Create a sale against container DB.
+
+Acceptance:
+- A clean machine with Docker can run the full stack.
+
+
+========================================
+Hands-on Lab 8: CI/CD and Docker Hub
+========================================
+Tasks:
+- Create repository secrets.
+- Run workflow on pull request.
+- Build Docker image.
+- Tag version.
+- Push to registry from main.
+
+Acceptance:
+- Pipeline produces a traceable container artifact.
